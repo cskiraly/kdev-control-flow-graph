@@ -126,7 +126,7 @@ m_graphLocked(false)
             KMessageBox::error((QWidget *) m_plugin->core()->uiController()->activeMainWindow(), i18n("Could not load the KGraphViewer kpart"));
     }
     else
-        KMessageBox::error((QWidget *) m_plugin->core()->uiController()->activeMainWindow(), i18n("Could not find the KGraphViewer factory"));
+        KMessageBox::error((QWidget *) m_plugin->core()->uiController()->activeMainWindow(), i18n("Could not find the KGraphViewer factory") + ": " + KLibLoader::self()->lastErrorMessage());
 }
 
 ControlFlowGraphView::~ControlFlowGraphView()
