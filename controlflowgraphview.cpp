@@ -52,7 +52,7 @@ m_graphLocked(false)
     KLibFactory *factory = KLibLoader::self()->factory("kgraphviewerpart");
     if (factory)
     {
-        m_part = factory->create<KParts::ReadOnlyPart>(this);
+        m_part = factory->create<KParts::ReadOnlyPart>("kgraphviewerpart", this);
         if (m_part)
         {
             QMetaObject::invokeMethod(m_part, "setReadWrite");
